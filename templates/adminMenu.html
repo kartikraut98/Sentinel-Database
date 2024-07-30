@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Menu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome, {{ first_name }}</h1>
+    </header>
+    <nav>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </nav>
+    <div class="container">
+        <ul>
+            <li><a href="{{ url_for('view_table', table_name='Stationinformation') }}">Stationinformation</a></li>
+            <li><a href="{{ url_for('view_table', table_name='Personnel') }}">Personnel</a></li>
+            <li><a href="{{ url_for('view_table', table_name='Shifts') }}">Shifts</a></li>
+            <li><a href="{{ url_for('view_table', table_name='InvestigatingOfficer') }}">InvestigatingOfficer</a></li>
+            <li><a href="{{ url_for('view_table', table_name='ReportingOfficer') }}">ReportingOfficer</a></li>
+            <li><a href="{{ url_for('view_table', table_name='ArrestingOfficer') }}">ArrestingOfficer</a></li>
+            <li><a href="{{ url_for('view_table', table_name='PenalCode') }}">PenalCode</a></li>
+            <li><a href="{{ url_for('view_table', table_name='Cases') }}">Cases</a></li>
+            <li><a href="{{ url_for('view_table', table_name='Evidence') }}">Evidence</a></li>
+            <li><a href="{{ url_for('view_table', table_name='Suspects') }}">Suspects</a></li>
+            <li><a href="{{ url_for('view_table', table_name='Witnesses') }}">Witnesses</a></li>
+            <li><a href="{{ url_for('view_table', table_name='Incidents') }}">Incidents</a></li>
+            <li><a href="{{ url_for('view_table', table_name='CourtAppearances') }}">CourtAppearances</a></li>
+            <li><a href="{{ url_for('view_table', table_name='Arrests') }}">Arrests</a></li>
+            <li><a href="{{ url_for('view_table', table_name='CrimeReports') }}">CrimeReports</a></li>
+        </ul>
+    </div>
+    <footer class="footer">
+    </footer>
+</body>
+</html>

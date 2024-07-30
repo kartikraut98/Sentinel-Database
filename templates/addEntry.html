@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Entry to {{ table_name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Add Entry to {{ table_name }}</h1>
+    </header>
+    <nav>
+        <a href="{{ url_for('admin_menu') }}">Admin Menu</a>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </nav>
+    <div class="container">
+        <form method="POST">
+            {% for column in columns %}
+            <label for="{{ column['Field'] }}">{{ column['Field'] }}</label>
+            <input type="text" name="{{ column['Field'] }}" id="{{ column['Field'] }}" required>
+            <br>
+            {% endfor %}
+            <button type="submit">Add Entry</button>
+        </form>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Your Company</p>
+    </footer>
+</body>
+</html>
